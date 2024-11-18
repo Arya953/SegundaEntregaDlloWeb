@@ -1,0 +1,18 @@
+main{
+    h2{
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    p{
+        padding: 10px;
+        margin: 10px;
+    }
+    .flex-container-carousel{
+        display: flex; 
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
