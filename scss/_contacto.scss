@@ -7,7 +7,7 @@
         "main aside"
         "footer footer";
         .header-contacto{
-            background-color: #2733d6;
+            background-color:$nav;
             padding:10px;
             display:flex;
             grid-area: header;
@@ -65,7 +65,7 @@
             }
         }
         .aside{
-            background-color: #e5e6e6;
+            background-color: $fondo;
             padding:1.2rem;
             display: flex;
             flex-direction: column;
@@ -85,7 +85,7 @@
             }
         }
         .footer-contacto{
-            background-color: #9abdffdd;
+            background-color: $footer;
             grid-area: footer;
         }
 }
