@@ -47,9 +47,12 @@ body{
                 align-items: center;
                 .direcciones{
                     color: black;
+                    background-color: #2b59b6c4;
+                    border-radius: 10px;
                     text-decoration: none;
                     padding: 0.7rem;
                     transition: all 1s;
+                    font-weight: 3px;
                 }
                 .direcciones:hover{
                     background-color: black;

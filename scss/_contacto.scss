@@ -79,13 +79,15 @@
                 list-style-type: none;
                 line-height: 50px;
                 font-size: 20px;
-            }
-            figure{
-                text-align: center;
+                li{
+                    img{
+                        width: 150px;
+                    }
+                }
             }
         }
-        .footer-contacto{
-            background-color: $footer;
-            grid-area: footer;
-        }
+    .footer-contacto{
+        background-color: $footer;
+        grid-area: footer;
+    }
 }

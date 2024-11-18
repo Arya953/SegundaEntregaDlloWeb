@@ -45,9 +45,12 @@ body .header .header_nav .header_menu {
 }
 body .header .header_nav .header_menu .direcciones {
   color: black;
+  background-color: rgba(43, 89, 182, 0.768627451);
+  border-radius: 10px;
   text-decoration: none;
   padding: 0.7rem;
   transition: all 1s;
+  font-weight: 3px;
 }
 body .header .header_nav .header_menu .direcciones:hover {
   background-color: black;
@@ -106,6 +109,10 @@ main .flex-container-carousel {
   justify-content: center;
   align-content: center;
 }
+main .flex-container-carousel .texto-carousel {
+  background-color: rgba(245, 245, 220, 0.6274509804);
+  border-radius: 15px;
+}
 
 h2 {
   padding: 10px;
@@ -125,6 +132,7 @@ h2 {
   margin: 10px;
   text-align: center;
   line-height: 90px;
+  width: 600px;
 }
 
 h2 {
@@ -228,8 +236,8 @@ p {
   line-height: 50px;
   font-size: 20px;
 }
-.contenedor .aside figure {
-  text-align: center;
+.contenedor .aside ul li img {
+  width: 150px;
 }
 .contenedor .footer-contacto {
   background-color: rgba(154, 189, 255, 0.8666666667);
@@ -243,6 +251,10 @@ p {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "main" "aside" "footer";
   }
+  .footer-contacto {
+    bottom: 0 auto;
+    font-size: 10px;
+  }
   .bodyinicio {
     background-image: url(../imagen/jurcont1.png);
     background-position: center center;
@@ -252,16 +264,16 @@ p {
     z-index: 0;
   }
   .index-texto {
-    position: absolute;
+    position: relative;
     width: auto;
     height: auto;
-    top: 25%;
-    left: 10%;
-    right: 10%;
+    top: 10%;
+    left: 25%;
+    right: 25%;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.704);
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   .flex-container {
     width: 50%;
@@ -286,21 +298,24 @@ p {
     flex-direction: column;
   }
   .header_menu {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    width: 0 auto;
+    height: 0 auto;
   }
   .header_nav {
-    width: fit-content;
-    height: fit-content;
+    width: 0 auto;
+    height: 0 auto;
   }
   .direcciones {
-    font-size: 16px;
+    font-size: 13px;
   }
   .header_logo img {
     width: 35px;
     margin: 5px;
     border-radius: 30em;
     border: black solid 1.5px;
+    margin-bottom: 20px;
   }
   .bodyinicio {
     background-image: url(../imagen/jurcont1.png);
@@ -311,7 +326,13 @@ p {
     z-index: 0;
   }
   .inicioflex {
-    position: center;
+    position: relative;
+    width: 0 auto;
+    height: 0 auto;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.704);
+    text-align: center;
+    font-size: 1px;
   }
   .index-texto {
     position: absolute;
@@ -323,11 +344,30 @@ p {
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.704);
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.2rem;
   }
   .flex-container {
-    width: 50%;
-    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .flex-container .multimedia {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    line-height: 90px;
+    width: 400px;
+  }
+  .footer-contacto {
+    bottom: 0 auto;
+    font-size: 13px;
+  }
+  .aside ul li img {
+    width: 75px;
+  }
+  footer {
+    bottom: 0;
   }
 }
 
