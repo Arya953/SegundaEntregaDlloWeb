@@ -327,24 +327,15 @@ p {
   }
   .inicioflex {
     position: relative;
-    width: 0 auto;
-    height: 0 auto;
+    width: 99%;
+    height: 5%;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.704);
     text-align: center;
     font-size: 1px;
   }
   .index-texto {
-    position: absolute;
-    width: auto;
-    height: auto;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.704);
-    text-align: center;
-    font-size: 0.2rem;
+    font-size: 1px;
   }
   .flex-container {
     display: flex;
