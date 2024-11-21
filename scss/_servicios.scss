@@ -1,19 +1,15 @@
-h2{
+
+.vd-servicios{
+    h2{
     padding: 10px;
     margin: 5px;
     text-align: center;
     text-decoration: underline;
-}
-.flex-container{
-    display: flex; 
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-    .multimedia{
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
-        line-height: 90px;
-        width: 600px;
     }
-}
+    div{
+        video{
+            width: 100%;
+            height: auto;
+        }
+    }
+}   

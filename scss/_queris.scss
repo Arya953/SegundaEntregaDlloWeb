@@ -10,14 +10,17 @@
         "footer";
     }
 }
-@media screen and (max-width:480px){
-    .header{
-       flex-direction: column;
+
+@media screen and (max-width: 480px){
+    .header .header_logo img{
+        width: 50px;
     }
-    .header_logo img{
-        margin-bottom: 20px;
+    .header .header_menu .direcciones{
+        font-size: 16px;
     }
-    .main{
-       flex-direction: column;
+    .flex-container{
+        .multimedia{
+            width: 150px;
+        }
     }
 }

@@ -18,6 +18,7 @@ body .header {
   position: sticky;
   top: 0;
   z-index: 999;
+  grid-area: header;
 }
 body .header .header_nav {
   width: 100%;
@@ -66,6 +67,7 @@ body footer {
   justify-content: space-between;
   text-align: center;
   bottom: 0;
+  grid-area: footer;
 }
 
 .bodyinicio {
@@ -75,6 +77,9 @@ body footer {
   background-attachment: fixed;
   background-size: cover;
   z-index: 0;
+}
+.bodyinicio main {
+  grid-area: main;
 }
 .bodyinicio main .inicioflex {
   display: flex;
@@ -93,6 +98,9 @@ body footer {
   font-size: 1.5rem;
 }
 
+main {
+  grid-area: main;
+}
 main h2 {
   padding: 10px;
   margin: 5px;
@@ -112,6 +120,10 @@ main .flex-container-carousel {
 main .flex-container-carousel .texto-carousel {
   background-color: rgba(245, 245, 220, 0.6274509804);
   border-radius: 15px;
+}
+
+main {
+  grid-area: main;
 }
 
 h2 {
@@ -135,68 +147,87 @@ h2 {
   width: 600px;
 }
 
-h2 {
+.contenedor-formulario {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+.contenedor-formulario h2 {
   padding: 10px;
   margin: 5px;
   text-align: center;
   text-decoration: underline;
 }
-
-p {
+.contenedor-formulario p {
   padding: 10px;
   margin: 10px;
 }
-
-.container {
+.contenedor-formulario .container {
   display: block;
   padding: 10px;
   width: 80%;
   height: 90%;
 }
-.container .boton {
+.contenedor-formulario .container .boton {
   display: flex;
   justify-content: right;
 }
 
 .contenedor {
+  margin: auto;
+  width: 90%;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-areas: "header header" "main aside" "footer footer";
 }
-.contenedor .header-contacto {
-  background-color: #2733d6;
-  padding: 10px;
-  display: flex;
+.contenedor .header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   grid-area: header;
-  justify-content: space-around;
-  align-items: center;
 }
-.contenedor .header-contacto .header_logo img {
+.contenedor .header .header_logo img {
   width: 75px;
   margin: 10px;
   border-radius: 30em;
   border: black solid 1.5px;
+  transition: all 3s;
 }
-.contenedor .header-contacto nav ul {
-  list-style: none;
+.contenedor .header .header_logo img:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+.contenedor .header .header_logo .header_nav {
+  width: 100%;
+  height: 100%;
+  background-color: #2733d6;
+  margin: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  z-index: 999;
 }
-.contenedor .header-contacto nav ul li {
+.contenedor .header .header_logo .header_menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.contenedor .header .header_logo .header_menu .direcciones {
+  color: black;
+  background-color: rgba(43, 89, 182, 0.768627451);
   border-radius: 10px;
-  margin: 0 10px;
-}
-.contenedor .header-contacto nav ul li a {
-  color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 0.7rem;
-  display: block;
-  border-radius: 10px;
+  transition: all 1s;
+  font-weight: 3px;
 }
-.contenedor .header-contacto nav ul li a:hover {
-  background-color: rgb(0, 0, 0);
+.contenedor .header .header_logo .header_menu .direcciones:hover {
+  background-color: black;
   color: rgb(255, 255, 255);
+  border-radius: 20px;
+  transform: scale(1.5, 1.5);
 }
 .contenedor .main {
   background-color: rgb(202, 255, 237);
@@ -251,114 +282,31 @@ p {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "main" "aside" "footer";
   }
-  .footer-contacto {
-    bottom: 0 auto;
-    font-size: 10px;
-  }
-  .bodyinicio {
-    background-image: url(../imagen/jurcont1.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 0;
-  }
-  .index-texto {
-    position: relative;
-    width: auto;
-    height: auto;
-    top: 10%;
-    left: 25%;
-    right: 25%;
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.704);
-    text-align: center;
-    font-size: 0.5rem;
-  }
-  .flex-container {
-    width: 50%;
-    margin: 0 auto;
-  }
 }
-@media screen and (max-width: 480px) {
-  .header-contacto {
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-  }
-  .header-contacto nav {
-    margin: 0 auto;
-    padding: 1px;
-    font-size: 5px;
-  }
-  .header-contacto img {
-    margin-bottom: 20px;
-  }
-  .main-contacto .texto {
-    flex-direction: column;
-  }
-  .header_menu {
+@media screen and (max-widht: 480px) {
+  .header {
     display: flex;
-    flex-direction: row;
-    width: 0 auto;
-    height: 0 auto;
   }
   .header_nav {
-    width: 0 auto;
-    height: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header_menu {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
   .direcciones {
-    font-size: 13px;
+    display: block;
+    padding: 1rem;
+    margin: 5px 0;
   }
   .header_logo img {
-    width: 35px;
+    width: 50px;
     margin: 5px;
-    border-radius: 30em;
-    border: black solid 1.5px;
-    margin-bottom: 20px;
   }
-  .bodyinicio {
-    background-image: url(../imagen/jurcont1.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 0;
-  }
-  .inicioflex {
-    position: relative;
-    width: 99%;
-    height: 5%;
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.704);
-    text-align: center;
-    font-size: 1px;
-  }
-  .index-texto {
-    font-size: 1px;
-  }
-  .flex-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
-  }
-  .flex-container .multimedia {
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    line-height: 90px;
-    width: 400px;
-  }
-  .footer-contacto {
-    bottom: 0 auto;
-    font-size: 13px;
-  }
-  .aside ul li img {
-    width: 75px;
-  }
-  footer {
-    bottom: 0;
+  .header_nav {
+    background-color: #333;
   }
 }
 
