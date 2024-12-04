@@ -1,5 +1,13 @@
 $fondo:#e6eceb;
 $footer:#9abdffdd;
+$titulos: padding 10px;
+$colortitulos: black;
+@mixin h2styles ($titulos, $colortitulos){
+    padding: $titulos;
+    color: $colortitulos;
+    text-align: center;
+    text-decoration: underline;
+}
 
 *{
     padding: 0;

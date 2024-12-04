@@ -17,8 +17,7 @@
             justify-content: center;
             grid-area: main;
             h2{
-                text-align: center;
-                padding: 1rem;
+                @include h2styles
             }
             .img{
                 text-align: center;
